@@ -12,13 +12,15 @@
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
   {{ end }}
   <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <title>{{ block "title" . }}{{ .Site.Title }}{{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
 </head>
 <body>
-  {{ block "header" . }}{{ partial "site-header.html" . }}{{ end }}
+  {{ partial "navigation.html" . }}
+  {{ block "header" . }}{{ partial "page-header.html" . }}{{ end }}
   {{ block "main" . }}{{ end }}
 </body>
 </html>

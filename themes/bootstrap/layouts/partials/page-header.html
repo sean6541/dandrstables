@@ -1,0 +1,8 @@
+<div class="header-container">
+  <div style="text-align: center;">
+    <h1 class="display-3">{{ .Page.Title }}</h1>
+    {{ with .Params.Subtitle }}
+      <p class="lead">{{ . }}</p>
+    {{ end }}
+  </div>
+</div>
